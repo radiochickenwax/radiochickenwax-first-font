@@ -1,0 +1,939 @@
+% Thu Jan 17, 2013 18:44:52
+% to convert a number to a string with emacs?
+
+% (aref "hello" 0)  => 104 (#o150, #x68)
+% (aref "abc" 0) => 97 (#o141, #x61)
+% (aref "ABC" 0) => 65 (#o101, #x41)
+% (string 97) => "a"
+% (aref "e" 0) => 101 (#o145, #x65)
+% (string 101) => "e"
+% (aref " " 0) => 32 (#o40, #x20)
+
+% (let* ((num 101)) (while ( < num (+ 26 101)) (search-forward "/") (kill-word 1) (insert "uppercase-") (insert (string num)) (setq num (+ 1 num)) ))
+
+
+
+8 dict begin
+/FontType 3 def
+/FontMatrix [.001 0 0 .001 0 0] def
+%/FontBBox [0 0 750 750] def
+/FontBBox [0 0 1000 1000] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+
+Encoding 32 /space put
+Encoding 65 /uppercase-a put
+Encoding 65 /uppercase-a put
+Encoding 66 /uppercase-b put
+Encoding 67 /uppercase-c put
+Encoding 68 /uppercase-d put
+Encoding 69 /uppercase-e put
+Encoding 70 /uppercase-f put
+Encoding 71 /uppercase-g put
+Encoding 72 /uppercase-h put
+Encoding 73 /uppercase-i put
+Encoding 74 /uppercase-j put
+Encoding 75 /uppercase-k put
+Encoding 76 /uppercase-l put
+Encoding 77 /uppercase-m put
+Encoding 78 /uppercase-n put
+Encoding 79 /uppercase-o put
+Encoding 80 /uppercase-p put
+Encoding 81 /uppercase-q put
+Encoding 82 /uppercase-r put
+Encoding 83 /uppercase-s put
+Encoding 84 /uppercase-t put
+Encoding 85 /uppercase-u put
+Encoding 86 /uppercase-v put
+Encoding 87 /uppercase-w put
+Encoding 88 /uppercase-x put
+Encoding 89 /uppercase-y put
+Encoding 90 /uppercase-z put
+
+Encoding 97 /lowercase-a put
+Encoding 98 /lowercase-b put
+Encoding 99 /lowercase-c put
+Encoding 100 /lowercase-d put
+Encoding 101 /lowercase-e put
+Encoding 102 /lowercase-f put
+Encoding 103 /lowercase-g put
+Encoding 104 /lowercase-h put
+Encoding 105 /lowercase-i put
+Encoding 106 /lowercase-j put
+Encoding 107 /lowercase-k put
+Encoding 108 /lowercase-l put
+Encoding 109 /lowercase-m put
+Encoding 110 /lowercase-n put
+Encoding 111 /lowercase-o put
+Encoding 112 /lowercase-p put
+Encoding 113 /lowercase-q put
+Encoding 114 /lowercase-r put
+Encoding 115 /lowercase-s put
+Encoding 116 /lowercase-t put
+Encoding 117 /lowercase-u put
+Encoding 118 /lowercase-v put
+Encoding 119 /lowercase-w put
+Encoding 120 /lowercase-x put
+Encoding 121 /lowercase-y put
+Encoding 122 /lowercase-z put
+
+
+
+/space {
+    0 1000 moveto
+} bind def
+
+
+/uppercase-a {
+    -200 -200 translate
+    0 0 moveto
+    200 200 rmoveto
+    200 600 rlineto
+    100 0 rlineto
+    200 -600 rlineto
+    -100 0 rlineto
+    -100 250 rlineto
+    -80 0 rlineto
+    -100 -250 rlineto
+    closepath
+    320 300 rmoveto
+    -70 200 rlineto
+    -70 -200 rlineto
+    closepath
+    fill
+    200 200 translate
+} bind def
+
+/uppercase-b { -200 -200 translate
+    0 0 moveto
+    300 200 rmoveto
+    0 600 rlineto
+    300 -50 
+    300 -250
+    175 -300 rcurveto
+    200 -50 
+    200 -250
+    -175 -300 rcurveto 
+    closepath   % finish outer path
+    80 100 rmoveto
+    200 100
+    140 100 
+    0 150 rcurveto 
+    closepath  % finish lower inner path
+    0 220 rmoveto
+    200 100
+    140 100 
+    0 150 rcurveto
+    closepath  % finish upper inner path
+    fill     200 200 translate
+    %stroke
+    % end char B
+} bind def
+
+/uppercase-c { %0 0 moveto
+      newpath
+      -200 -200 translate
+      675 600 moveto
+      -130 0 rlineto
+      0 350
+      -200 200 
+      -200 -100 rcurveto
+      0 -200 200 -200 200 -40 rcurveto 
+      130 0 rlineto
+      0 -300 -300 -260 -420 -130 rcurveto
+      -120 300 0 480 200 540 rcurveto
+      200 0 200 -100 260 -260 rcurveto
+      closepath
+      fill 200 200 translate
+      } bind def
+
+/uppercase-d { -200 -200 translate
+   0 0 moveto
+   200 200 rmoveto
+   0 600 rlineto
+   600 -50
+   600 -550
+   0 -600 rcurveto closepath
+   100 100 rmoveto
+   300 100
+   300 400
+   0 400 rcurveto
+   0 -400 rlineto closepath
+   fill %stroke
+   200 200 translate
+ } bind def
+
+/uppercase-e { -200 -200 translate
+   0 0 moveto
+   200 200 rmoveto
+   0 600 rlineto
+   400 0 rlineto
+   0 -100 rlineto
+   -300 0 rlineto
+   0 -150 rlineto
+   200 0 rlineto
+   0 -100 rlineto
+   -200 0 rlineto
+   0 -150 rlineto
+   300 0 rlineto
+   0 -100 rlineto
+   -400 0 rlineto
+   closepath
+   fill %
+   200 200 translate
+ } bind def
+
+/uppercase-f {    200 neg dup translate
+   0 0 moveto
+   200 200 rmoveto
+   0 600 rlineto
+   400 0 rlineto
+   0 -100 rlineto
+   -300 0 rlineto
+   0 -150 rlineto
+   200 0 rlineto
+   0 -100 rlineto
+   -200 0 rlineto
+   0 -250 rlineto
+   closepath
+   fill %
+   200 200 translate
+ } bind def
+
+/uppercase-g { -200 dup translate
+        500 600 moveto
+        100 0 rlineto
+        80 200 -400 300 -400 -100 rcurveto
+        20 -200 100 -300 200 -300 rcurveto
+        200 -50 250 200 200 270 rcurveto
+        -200 0 rlineto
+        0 -100 rlineto
+        100 0 rlineto
+        100 -40 -100 -100 -180 0 rcurveto
+        -100 240 0 400 80 360 rcurveto
+        20 -5 140 -30 100 -120 rcurveto
+        closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-h { -200 dup translate
+     200 200 moveto
+     0 600 rlineto 
+     100 0 rlineto
+     0 -250 rlineto
+     200 0 rlineto
+     0  250 rlineto
+     100 0 rlineto
+     0 -600 rlineto
+     -100 0 rlineto
+     0 250 rlineto
+     -200 0 rlineto 
+     0 -250 rlineto
+     closepath
+     fill 
+     200 200 translate
+      } bind def
+
+/uppercase-i { -150 -200 translate
+     200 250 moveto
+     0 550 rlineto 
+     -50 0 rlineto
+     0 50 rlineto
+     200 0 rlineto
+     0 -50 rlineto
+     -50 0 rlineto
+     0 -550 rlineto
+     50 0 rlineto
+     0 -50 rlineto
+     -200 0 rlineto
+     0 50 rlineto
+     closepath
+     fill  150 200 translate
+      } bind def
+
+/uppercase-j { -150 -200 translate
+     200 800 moveto
+     0 -50 rlineto
+     150 0 rlineto
+     0 -350 rlineto
+     0 -200 
+     -100 -200
+     -100 0 rcurveto
+     -100 0 rlineto  % top part of bottom loop  
+     -50 -200
+     100 -200
+     100 -200 rcurveto
+     200 0 
+     200 -10 
+     200 200 rcurveto
+     0 350 rlineto
+     150 0 rlineto
+     0 50 rlineto closepath
+     fill 150 200 translate
+      } bind def
+
+/uppercase-k { 200 neg dup translate
+     200 200 moveto
+     0 600 rlineto
+     100 0 rlineto
+     0 -300 rlineto
+     200 300 rlineto
+     100 0 rlineto
+     -200 -300 rlineto
+     200 -300 rlineto
+    -100 0 rlineto
+     -200 300 rlineto
+     0 -300 rlineto closepath
+     fill 200 dup translate
+} bind def
+
+/uppercase-l { 200 neg dup translate
+     200 200 moveto
+     0 600 rlineto
+     100 0 rlineto
+     0 -500 rlineto
+     200 0 rlineto
+     0 -100 rlineto
+     closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-m { -200 dup translate
+     200 200 moveto
+     0 600 rlineto
+     100 0 rlineto
+     150 -400 rlineto
+     150 400 rlineto
+     100 0 rlineto
+     0 -600 rlineto
+     -100 0 rlineto
+     0 400 rlineto
+     -150 -350 rlineto
+     -150 350 rlineto
+     0 -400 rlineto
+     closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-n { 200 neg dup translate
+     200 200 moveto
+     0 600 rlineto
+     100 0 rlineto
+     150 -400 rlineto
+     0 400 rlineto
+     100 0 rlineto
+     0 -600 rlineto
+     -100 0 rlineto
+     -150 400 rlineto
+     0 -400 rlineto
+     closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-o { 200 neg dup translate
+     500 800 moveto
+     -350 -25
+     -350 -575
+     0 -600 rcurveto % left outer half
+     350 25
+     350 575
+     0 600 rcurveto % right outer half
+     0 -100 rmoveto
+     200 25          
+     200 -300
+     0 -400 rcurveto  % right inner half
+     -200 100
+     -200 300
+     0 400 rcurveto   % left inner half,
+     fill 200 dup translate
+      } bind def
+
+/uppercase-p { 200 neg dup translate
+     200 200 moveto
+     0 600 rlineto 
+     500 50
+     500 -350
+     100 -300 rcurveto
+     0 -300 rlineto 
+     closepath
+     100 500 rmoveto % start inner loop
+     0 -100 rlineto
+     200 10
+     200 90 
+     0 100 rcurveto  % end inner loop 
+     fill 200 dup translate
+      } bind def
+
+/uppercase-q { -200 dup translate
+     500 800 moveto
+     -350 -25
+     -350 -575
+     0 -600 rcurveto % left outer .5 top to bottom
+     200 -80 rlineto
+     150 0 rlineto   % outer Q serif
+     -200 80 rlineto 
+     200 300
+     200 500
+     -150 600 rcurveto closepath % start inner
+     0 -100 rmoveto
+     200 25          
+     200 -300
+     0 -400 rcurveto  % right inner .5
+     -200 100
+     -200 300
+     0 400 rcurveto   % left inner .5
+     fill 200 dup translate
+      } bind def
+
+/uppercase-r { 200 neg dup translate
+     200 200 moveto
+     0 600 rlineto 
+     500 50
+     500 -350
+     150 -300 rcurveto
+     300 -300 rlineto
+     -100 0 rlineto
+     -250 250 rlineto
+     0 -250 rlineto 
+     closepath
+     100 500 rmoveto % start inner loop
+     0 -100 rlineto
+     200 10
+     200 90 
+     0 100 rcurveto  % end inner loop 
+     fill 200 dup translate
+      } bind def
+
+/uppercase-s { % start in middle of char
+      -200 dup translate
+      400 400 moveto
+      -200 50 -200 450 100 400 rcurveto
+      250 -25
+      150 -70
+      150 -100 rcurveto
+      -300 150 
+      -300 -150 
+      -100 -200 rcurveto
+      200 0 
+      40 -450 
+      -350 -400 rcurveto
+      0 100 rlineto
+      400 20
+      200 350
+      200 150 rcurveto closepath
+     fill       200 dup translate
+      } bind def
+
+/uppercase-t { 200 neg dup translate
+      400 200 moveto
+      0 500 rlineto
+      -200 0 rlineto
+      0 100 rlineto
+      500 0 rlineto
+      0 -100 rlineto
+      -200 0 rlineto
+      0 -500 rlineto
+      closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-u { 200 neg dup translate
+      200 800 moveto
+      -50 -800
+      650 -800
+      600 0 rcurveto
+      -150 0 rlineto
+      -50 -500
+      -400 -500
+      -300 0 rcurveto
+      closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-v { 200 neg dup translate
+      200 800 moveto
+      200 -600 rlineto
+      100 0 rlineto
+      200 600 rlineto
+      -100 0 rlineto
+      -100 -500 rlineto
+      -100 500 rlineto
+      closepath
+     fill 200 dup translate
+      } bind def
+
+/uppercase-w { 200 neg dup translate
+        200 800 moveto
+        100 -600 rlineto
+        50 0 rlineto 
+        50 250 rlineto
+        50 -250 rlineto
+        50 0 rlineto
+        100 600 rlineto
+        -100 0 rlineto
+        -50 -400 rlineto
+        -50 200 rlineto
+        -50 -200 rlineto
+        -50 400 rlineto
+        closepath fill 200 dup translate
+      } bind def
+
+/uppercase-x { 200 neg dup translate
+      200 800 moveto
+      100 0 rlineto
+      100 -300 rlineto
+      100 300 rlineto
+      100 0 rlineto
+      -100 -300 rlineto
+      100 -300 rlineto
+      -100 0 rlineto
+      -100 300 rlineto
+      -100 -300 rlineto
+      -100 0 rlineto
+      100 300 rlineto
+      -100 300 rlineto
+      closepath fill
+      200 dup translate
+      } bind def
+
+/uppercase-y { 200 neg dup translate
+      200 800 moveto
+      100 0 rlineto
+      100 -300 rlineto
+      100 300 rlineto
+      100 0 rlineto
+      -150 -400 rlineto
+      0 -200 rlineto
+      -100 0 rlineto
+      0 200 rlineto
+      -150 400 rlineto
+      closepath fill
+      200 dup translate
+      } bind def
+
+/uppercase-z { 200 neg 100 neg translate
+      200 700 moveto
+      400 0 rlineto
+      0 -100 rlineto
+      -400 -400 rlineto
+      0 -100 rlineto
+      400 0 rlineto
+      0 100 rlineto
+      -300 0 rlineto
+      300 300 rlineto
+      0 100 rlineto
+      -400 0 rlineto
+      closepath fill
+      200 100 translate
+      } bind def
+
+/lowercase-a { -200 -50 translate
+      200 400 moveto
+      0 200 400 200 
+      400 0 rcurveto
+      0 -200 rlineto
+      0 0 -5 -75
+      100 -100 rcurveto
+      -50 -50 rlineto
+      0 0  0 0
+      -100 100 rcurveto
+      0 -150 -300 -150
+      -300 50 rcurveto
+      0 180
+      300 100
+      300 130 rcurveto
+      0 200 -150 280 
+      -300 35 rcurveto
+      closepath
+      450 100 moveto 
+      250 300 -380 100
+      0 0 rcurveto closepath fill
+      200 50 translate
+} bind def
+
+
+
+
+/lowercase-b { 
+ 50 50 moveto
+ 0 600 rlineto
+ 100 0 rlineto
+ 0 -350 rlineto
+ 350 75
+ 350 -275
+ 0 -200 rcurveto
+ 0 -50 rlineto
+ -100 0 rlineto closepath
+ 100 100 rmoveto
+ 200 -50 
+ 200 150
+ 0 100 rcurveto
+ closepath fill
+} bind def
+
+
+/lowercase-c { 
+ 400 300 moveto 
+ -400 100
+ -400 -300
+ 0 -200 rcurveto
+ 0 50 rlineto
+ -300 0
+ -300 150
+ 0 100 rcurveto
+ closepath fill
+} bind def
+
+
+/lowercase-d { 
+ 350 50 moveto
+ 0 600 rlineto
+ -100 0 rlineto
+ 0 -350 rlineto
+ -300 50
+ -300 -250
+ 0 -150 rcurveto
+ 0 -100 rlineto closepath
+ 250 200 moveto
+ -200 -50
+ -200 100
+ 0 50 rcurveto
+ closepath fill
+} bind def
+
+
+/lowercase-e { 
+  250 200 moveto
+  200 0 rlineto
+  50 200
+  -350 200
+  -300 0 rcurveto
+  0 -300
+  160 -150
+  300 -200 rcurveto
+  0 75 rlineto
+  -100 0 rlineto
+  -190 0 -120 100
+  -100 125 rcurveto closepath
+  400 250 moveto
+  -175 0 rlineto
+  0 75 75 75 
+  175 0 rcurveto closepath fill
+} bind def
+
+
+/lowercase-f { 
+   150 50 moveto
+   0 300 rlineto
+   -100 0 rlineto
+   0 50 rlineto
+   100 0 rlineto
+   0 100 rlineto
+   0 100  100 200 150 0 rcurveto
+   -50 0 rlineto
+   0 100  -50 100 -50 0 rcurveto
+   0 -100 rlineto
+   100 0 rlineto
+   0 -50 rlineto
+   -100 0 rlineto
+   0 -300 rlineto
+   closepath fill
+} bind def
+
+/lowercase-g { 
+ 200 350 moveto
+ -200 10
+ -200 -160
+ 0 -150 rcurveto
+ 0 -100 rlineto
+ 10 -100
+ -110 -100
+ -100 50 rcurveto
+ -50 0 rlineto
+ -10 -200
+ 220 -250
+ 200 0 rcurveto
+ 0 250 rlineto
+ -50 0 rlineto closepath
+ 200 225 moveto
+ -150 0
+ -150 100
+ 0 100 rcurveto closepath fill
+} bind def
+
+
+/lowercase-h { 
+   50 50 moveto
+   0 550 rlineto
+   50 0 rlineto
+   0 -350 rlineto
+   50 150  150 150
+   150 -200 rcurveto
+   -50 0 rlineto
+   50 250  -150 250
+   -100 0 rcurveto closepath fill
+} bind def
+
+/lowercase-i {
+    50 50 moveto
+     0 300 rlineto
+     50 0 rlineto
+     0 -300 rlineto
+     -50 0 rlineto closepath
+     75 400 moveto
+     -100 50  100 100
+     0 0 rcurveto closepath fill
+} bind def
+
+
+/lowercase-j {
+    150 150 moveto
+     0 200 rlineto
+     50 0 rlineto
+     0 -200 rlineto
+     0 -150  -200   -150
+     -150 50 rcurveto 
+     50 0 rlineto
+     0 -150   50 -50
+     50 -50 rcurveto
+% dot
+     175 400 moveto
+     -100 50  100 100
+     0 0 rcurveto closepath fill
+} bind def
+
+/lowercase-k {
+    50 50 moveto
+    0 500 rlineto
+    50 0 rlineto
+    0 -300 rlineto
+    100 100 rlineto
+    50 -50 rlineto
+    -100 dup rlineto
+    100 -100 rlineto
+    -50 -50 rlineto
+    -100 100 rlineto
+    0 -100 rlineto
+    closepath fill
+} bind def
+
+/lowercase-l {
+    50 50 moveto
+    0 500 rlineto
+    50 0 rlineto
+    0 -500 rlineto
+    closepath fill
+} bind def
+
+/lowercase-m {
+    50 50 moveto
+    0 300 rlineto
+    75 100 150 100
+    150 -150 rcurveto
+    -50 300 200 250
+    150 0 rcurveto
+    0 -150 rlineto
+    -50 0 rlineto
+    0 200 rlineto
+    -50 100 -100 -200
+    -50 -150 rcurveto
+    -100 0 rlineto
+    0 250  -75 300
+    -50 -50 rcurveto
+    closepath fill
+} bind def
+
+/lowercase-n {
+    50 50 moveto
+    0 300 rlineto
+    75 100 250 100
+    250 -150 rcurveto
+    0 -150 rlineto
+    -75 0 rlineto
+    0 250  -150 350
+    -100 0 rcurveto closepath fill
+} bind def
+
+/lowercase-o {
+    200 50 moveto
+    -200 0  -200 250
+    0 250 rcurveto
+    200 0 200 -250
+    0 -250 rcurveto closepath
+    200 100 moveto
+    100 0  100 150
+    0 150 rcurveto
+    -100 0  -100 -150
+    0 -150 rcurveto closepath fill
+} bind def
+
+
+/lowercase-p {
+    50 50 moveto
+    0 350 rlineto
+    50 0 rlineto 
+    0 -50 rlineto
+    150 50  150 -150
+    0 -100 rcurveto
+    0 -200 rlineto closepath
+    100 275 moveto
+    100 0  100 50
+    0 50 rcurveto closepath fill
+} bind def
+
+/lowercase-q {
+   200 250 moveto
+   -250 -50  -250 150
+   0 100 rcurveto
+   0 50 rlineto 50 0 rlineto
+   0 -350 rlineto
+   -50 0 rlineto closepath
+   200 325 moveto
+   -170  25  -170 -75
+   0 -50 rcurveto closepath fill
+} bind def
+
+/lowercase-r {
+   50 50 moveto
+   0 300 rlineto
+   50 0 rlineto
+   0 -50 rlineto
+   150 75  150 -125
+   150 -100 rcurveto
+   -50 0 rlineto
+   0 100 -100 0
+   -100 50 rcurveto
+   0 -200 rlineto closepath fill
+} bind def
+
+
+/lowercase-s {
+   300 350 moveto
+   0 -50 rlineto
+   50 0 rlineto
+   50 200 -250 200
+   -200 0 rcurveto
+   150 -100 rlineto
+   50 -200 -100 -150
+   -100 0 rcurveto
+   -50 0 rlineto
+   0 -50 rlineto
+   -25 -200   250  -200 
+   200 0 rcurveto
+   0 50 rlineto
+   -150 100 rlineto
+   -50 100   150 100
+   100 50 rcurveto fill
+} bind def
+
+/lowercase-t {
+  100 50 moveto
+  0 300 rlineto
+  -100 0 rlineto
+  0 50 rlineto
+  100 0 rlineto
+  0 100 rlineto
+  50 0 rlineto
+  0 -100 rlineto
+  100 0 rlineto
+  0 -50 rlineto
+  -100 0 rlineto
+  0 -300 rlineto closepath fill
+} bind def
+
+/lowercase-u {
+  50 400 moveto
+  -50 -400 350 -400
+  300 0 rcurveto
+  -50 0 rlineto
+  25 -300 -225 -300
+  -200 0 rcurveto closepath fill
+} bind def
+
+/lowercase-v {
+  50 400 moveto
+  150 -350 rlineto
+  50 0 rlineto
+  150 350 rlineto
+  -50 0 rlineto
+  -125 -300 rlineto
+  -125 300 rlineto closepath fill
+} bind def
+
+/lowercase-w {
+  50 400 moveto
+  125 -350 rlineto
+  50 0 rlineto
+  75 150 rlineto
+  75 -150 rlineto
+  50 0 rlineto
+  125 350 rlineto
+  -50 0 rlineto
+  -100 -250 rlineto
+  -100 150 rlineto
+  -100 -150 rlineto
+  -100 250 rlineto closepath fill
+} bind def
+
+/lowercase-x {
+  50 400 moveto
+  150 -175 rlineto
+  -150 -175 rlineto
+  50 0 rlineto
+  150 125 rlineto
+  150 -125 rlineto
+  50 0 rlineto
+  -150 175 rlineto
+  150 175 rlineto
+  -50 0 rlineto
+  -150 -175 rlineto
+  -150 175 rlineto closepath fill
+} bind def
+
+/lowercase-y {
+  50 400 moveto
+  150 -175 rlineto
+  -150 -175 rlineto
+  50 -50 rlineto
+  300 400 rlineto
+  -50 50 rlineto
+  -100 -175 rlineto
+  -100 125 rlineto closepath fill
+} bind def
+
+/lowercase-z {
+  50 350 moveto
+  0 50 rlineto
+  200 0 rlineto
+  0 -50 rlineto
+  -150 -250 rlineto
+  150 0 rlineto
+  0 -50 rlineto
+  -200 0 rlineto
+  0 100 rlineto
+  125 200 rlineto closepath fill
+} bind def
+
+end
+
+
+/BuildGlyph % Stack contains: font charname
+{ 1000 0 % Width
+0 0 750 750 % Bounding box
+setcachedevice 
+exch /CharProcs get exch 
+2 copy known not 
+{pop /.notdef} 
+if 
+get exec 
+} bind def 
+
+
+/BuildChar % LanguageLevel 1 compatibility
+{ 1 index /Encoding get exch get 
+1 index /BuildGlyph get exec 
+} bind def 
+currentdict
+end
+
+/ExampleFont2 exch definefont pop
